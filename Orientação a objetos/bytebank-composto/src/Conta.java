@@ -3,7 +3,7 @@ public class Conta {
     double saldo;
     int angencia;
     int numero;
-    String titular;
+    Cliente titular;
 
      public void depositar( double valor ) {
         this.saldo += valor;

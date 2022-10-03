@@ -6,6 +6,10 @@ public class Testabanco {
         paulo.profissao = "Programador";
 
         Conta contaDoPaulo = new Conta();
+        contaDoPaulo.depositar(100);
+
+        contaDoPaulo.titular = paulo;
+        System.out.println("O titular dessa conta é " + contaDoPaulo.titular.nome);
             }
     
 }

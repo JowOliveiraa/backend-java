@@ -5,6 +5,15 @@ public class Conta {
     private int numero;
     private Cliente titular;
 
+    public Conta ( double saldo, int angencia, int numero, Cliente titular ) {
+
+        this.saldo = saldo;
+        this.angencia = angencia;
+        this.numero = numero;
+        this.titular = titular;
+
+    }
+
      public void depositar( double valor ) {
         this.saldo += valor;
 
@@ -18,7 +27,7 @@ public class Conta {
         }
      }
 
-     public void transferir( double valor, Conta destino) {
+     public void transferir( double valor, Conta destino ) {
         if (this.saldo >= valor) {
             this.saldo -= valor;
             destino.saldo += valor;
@@ -26,6 +35,7 @@ public class Conta {
         } else {
             System.out.println("Saldo insuficiente");
         }
+
      }
 
      public double getSaldo() {

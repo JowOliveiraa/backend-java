@@ -1,15 +1,13 @@
 public class Testabanco {
     public static void main(String[] args) {
-        Cliente paulo = new Cliente();
-        paulo.setNome("Paulo Silveira");
-        paulo.setCpf("222.222.222-22");
-        paulo.setProfissao("Programador");
+        Cliente paulo = new Cliente("Paulo Silveira","222.222.222-22","Programador");
 
-        Conta contaDoPaulo = new Conta();
+        Conta contaDoPaulo = new Conta(0, 1, 123, paulo);
         contaDoPaulo.depositar(100);
 
-        contaDoPaulo.setTitular(paulo);
         System.out.println("O titular dessa conta é " + contaDoPaulo.getTitular().getNome());
-            }
+    
+    
+    }
     
 }

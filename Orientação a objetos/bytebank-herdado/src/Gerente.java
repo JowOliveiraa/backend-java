@@ -18,7 +18,7 @@ public class Gerente extends Funcionario {
         if (this.senha == senha) {
             System.out.println("Senha correta!");
         } else{
-            System.out.println("Senha errads!");
+            System.out.println("Senha errada!"); 
         }
     }
     

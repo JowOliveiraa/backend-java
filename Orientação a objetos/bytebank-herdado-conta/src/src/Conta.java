@@ -1,14 +1,14 @@
 public class Conta {
     
     private double saldo;
-    private int angencia;
+    private int agencia;
     private int numero;
     private Cliente titular;
 
-    public Conta ( int angencia, int numero ) {
+    public Conta ( int agencia, int numero ) {
 
         
-        this.angencia = angencia;
+        this.agencia = agencia;
         this.numero = numero;
         
 
@@ -49,11 +49,11 @@ public class Conta {
      }
 
      public int getAngencia() {
-         return angencia;
+         return agencia;
      }
 
-     public void setAngencia(int angencia) {
-         this.angencia = angencia;
+     public void setAngencia(int agencia) {
+         this.agencia = agencia;
      }
 
      public int getNumero() {

@@ -5,12 +5,11 @@ public class Conta {
     private int numero;
     private Cliente titular;
 
-    public Conta ( double saldo, int angencia, int numero, Cliente titular ) {
+    public Conta ( int angencia, int numero ) {
 
-        this.saldo = saldo;
         this.angencia = angencia;
         this.numero = numero;
-        this.titular = titular;
+        
 
     }
 

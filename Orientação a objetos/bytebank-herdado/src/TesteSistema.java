@@ -5,7 +5,7 @@ public class TesteSistema {
         
         Gerente gerente0 = new Gerente();
 
-        gerente0.setSenha(2022);
+        gerente0.setSenha(202);
 
         SistemaInterno sistema = new SistemaInterno();
 
@@ -13,7 +13,7 @@ public class TesteSistema {
 
         Administrador administrador = new Administrador();
 
-        administrador.setSenha(022);
+        administrador.setSenha(2022);
 
          sistema.autentica(administrador);
 

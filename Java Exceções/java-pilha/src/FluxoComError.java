@@ -1,14 +1,15 @@
-public class Fluxo {
+public class FluxoComError {
     public static void main(String[] args) {
         System.out.println("Ini do main");
 
         try {
             metodo1();
         } catch (ArithmeticException | NullPointerException | MinhaExcecao ex ) {
-            String messageException = ex.getMessage();
-            System.out.println("Exception " + messageException);
+
+            System.out.println("Exception " + ex.getMessage() );
             ex.printStackTrace();
         }
+
         System.out.println("Fim do main");
     }
 
@@ -19,10 +20,7 @@ public class Fluxo {
     }
 
     private static void metodo2() {
-        System.out.println("Ini do metodo2");
-
-        throw  new  MinhaExcecao("Deu ruim");
-
-        //System.out.println("Fim do metodo2");
+        System.out.println("Chamando o metodo2 infinitamente para gerar Error");
+        metodo2();
     }
 }

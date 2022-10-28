@@ -1,0 +1,23 @@
+package br.com.bytebank.teste;
+
+import br.com.bytebank.modelo.*;
+
+public class TesteTributaveis {
+
+    public static void main(String[] args) {
+         
+        ContaCorrente cc = new ContaCorrente(222, 333);
+
+        cc.setSaldo(100.0);
+
+        SeguroDeVida seguro = new SeguroDeVida();
+
+        CalculadordeImposto calc = new CalculadordeImposto();
+
+        calc.registra(cc);
+        calc.registra(seguro);
+
+        System.out.println(calc.getTotalImposto());
+    }
+    
+}

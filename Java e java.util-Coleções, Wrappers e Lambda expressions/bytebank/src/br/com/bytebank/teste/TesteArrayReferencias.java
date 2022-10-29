@@ -13,6 +13,6 @@ public class TesteArrayReferencias {
 
 
 
-        System.out.println("Numero da conta na primeira posição " + contas[0].getNumero());
+        System.out.println("Número da conta na primeira posição " + contas[0].getNumero());
     }
 }

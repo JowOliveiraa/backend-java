@@ -4,9 +4,7 @@ public class TesteArrayDePrimitivos {
 
     public static void main(String[] args) {
 
-        int [] idades = new int[5];
-
-
+        int[] idades = new int[5];
 
 
         System.out.println("Quantas posições tem o array idades: " + idades.length);
@@ -18,8 +16,8 @@ public class TesteArrayDePrimitivos {
 
         }
 
-        for (int i = 0; i <idades.length; i++) {
-            System.out.println(i);
+        for (int i = 0; i < idades.length; i++) {
+            System.out.println(idades[i]);
         }
 
     }

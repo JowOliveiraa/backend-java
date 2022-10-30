@@ -1,37 +1,36 @@
 package br.com.bytebank.modelo;
 
 public abstract class Conta {
-    
+
     private double saldo;
     private int agencia;
     private int numero;
     private Cliente titular;
 
-    public Conta ( int agencia, int numero ) {
+    public Conta(int agencia, int numero) {
 
-        
+
         this.agencia = agencia;
         this.numero = numero;
-        
+
 
     }
 
-    
 
-     public void depositar( double valor ) {
+    public void depositar(double valor) {
         this.saldo += valor;
 
-     }
+    }
 
-     public void sacar( double valor ) {
-        if (this.saldo >= valor){
+    public void sacar(double valor) {
+        if (this.saldo >= valor) {
             this.saldo -= valor;
         } else {
             System.out.println("Saldo insuficiente!");
         }
-     }
+    }
 
-     public void transferir( double valor, Conta destino ) {
+    public void transferir(double valor, Conta destino) {
         if (this.saldo >= valor) {
             this.saldo -= valor;
             destino.saldo += valor;
@@ -40,42 +39,52 @@ public abstract class Conta {
             System.out.println("Saldo insuficiente");
         }
 
-     }
+    }
 
-     public double getSaldo() {
-         return saldo;
-     }
+    public double getSaldo() {
+        return saldo;
+    }
 
-     public void setSaldo(double saldo) {
-         this.saldo = saldo;
-     }
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
 
-     public int getAngencia() {
-         return agencia;
-     }
+    public int getAngencia() {
+        return agencia;
+    }
 
-     public void setAngencia(int agencia) {
-         this.agencia = agencia;
-     }
+    public void setAngencia(int agencia) {
+        this.agencia = agencia;
+    }
 
-     public int getNumero() {
-         return numero;
-     }
+    public int getNumero() {
+        return numero;
+    }
 
-     public void setNumero(int numero) {
-         this.numero = numero;
-     }
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 
-     public Cliente getTitular() {
-         return titular;
-     }
-     public void setTitular(Cliente titular) {
-         this.titular = titular;
-     }
+    public Cliente getTitular() {
+        return titular;
+    }
+
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
+
+
 
     @Override
     public String toString() {
         return "Agencia: " + this.agencia + ", Número: " + this.numero;
+    }
+
+    public boolean eIgual(Conta conta) {
+        if (this.agencia != conta.agencia && this.numero != conta.numero) {
+            return false;
+        }
+        return true;
     }
 }
 

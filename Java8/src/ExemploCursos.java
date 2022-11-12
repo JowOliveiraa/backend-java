@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.OptionalDouble;
+import java.util.stream.Collectors;
 
 class Curso {
 
@@ -80,6 +81,13 @@ public class ExemploCursos {
                 .map(Curso::getNome)
                 .forEach(System.out::println);
 
+        System.out.println("*****************************************************");
+
+        List<Curso> cursoFiltrado = cursos.stream()
+                .filter(curso -> curso.getAlunos() > 50)
+                .collect(Collectors.toList());
+
+        cursoFiltrado.forEach(System.out::println);
 
 
 

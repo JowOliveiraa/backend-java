@@ -1,8 +1,11 @@
 package Test;
 
 import model.CreateConnection;
+import model.dao.CategoryDAO;
+import model.dao.ProductDAO;
 
 import java.sql.*;
+import java.util.List;
 
 public class TestListing {
 
@@ -22,6 +25,11 @@ public class TestListing {
             String descricao = resultSet.getString("descricao");
             System.out.println("ID: " + id + ", Nome: " + nome + ", Descrição: " + descricao);
         }
+
+        System.out.println("*************************************************************");
+
+        ProductDAO product = new ProductDAO(connection);
+        product.listProduct().stream().forEach(product1 -> System.out.println(product1));
 
         connection.close();
         statement.close();

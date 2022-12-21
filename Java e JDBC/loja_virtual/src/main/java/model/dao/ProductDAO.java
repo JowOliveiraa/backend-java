@@ -1,7 +1,6 @@
 package model.dao;
 
-import com.mysql.cj.xdevapi.PreparableStatement;
-import com.sun.source.tree.TryTree;
+import model.Category;
 import model.CreateConnection;
 import model.Product;
 
@@ -25,13 +24,14 @@ public class ProductDAO {
             PreparedStatement statement = connection.prepareStatement(
                     "INSERT INTO PRODUTO(nome, descricao) values(?, ?)");
 
-            statement.setString(1, product.getNome());
-            statement.setString(2, product.getDescricao());
+            statement.setString(1, product.getName());
+            statement.setString(2, product.getDescription());
             statement.execute();
         }
     }
 
-    public void listProduct() throws SQLException {
+    public List<Product> listProduct() throws SQLException {
+            List<Product> products = new ArrayList<>();
 
         try(PreparedStatement statement = connection.prepareStatement(
                 "SELECT * FROM PRODUTO;")) {
@@ -43,9 +43,31 @@ public class ProductDAO {
                                 resultSet.getInt(1),
                                 resultSet.getString(2),
                                 resultSet.getString(3));
-                        System.out.println(product);
+                        products.add(product);
                     }
                 }
         }
+        return products;
+    }
+
+    public List<Product> search(Category category) throws SQLException {
+        List<Product> products = new ArrayList<>();
+
+        String sql = "SELECT * FROM PRODUTO WHERE catogira_id = ?";
+        try(PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setInt(1, category.getId());
+            statement.execute();
+
+            try(ResultSet resultSet = statement.getResultSet()) {
+                while (resultSet.next()) {
+                    Product product = new Product(
+                            resultSet.getInt(1),
+                            resultSet.getString(2),
+                            resultSet.getString(3));
+                    products.add(product);
+                }
+            }
+        }
+        return products;
     }
 }

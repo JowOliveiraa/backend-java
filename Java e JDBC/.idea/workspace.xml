@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4290bb1e-b8d7-49ad-8e87-f7e189555a91" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/loja_virtual/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Maven-gerenciamento-de-dependencias-build-aplicacoes-java-projeto_inicial/loja/src/main/java/br/com/alura/loja/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Maven-gerenciamento-de-dependencias-build-aplicacoes-java-projeto_inicial/loja/src/main/java/br/com/alura/loja/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Maven-gerenciamento-de-dependencias-build-aplicacoes-java-projeto_inicial/loja/src/test/java/br/com/alura/loja/ProdutoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Maven-gerenciamento-de-dependencias-build-aplicacoes-java-projeto_inicial/loja/src/test/java/br/com/alura/loja/ProdutoTest.java" afterDir="false" />
+    <list default="true" id="4290bb1e-b8d7-49ad-8e87-f7e189555a91" name="Changes" comment="Update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loja_virtual/src/main/java/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/loja_virtual/src/main/java/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loja_virtual/src/main/java/model/dao/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/loja_virtual/src/main/java/model/dao/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loja_virtual/src/test/java/Test/TestListing.java" beforeDir="false" afterPath="$PROJECT_DIR$/loja_virtual/src/test/java/Test/TestListing.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,20 +43,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/backend-java/Java e JDBC",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/backend-java/Java e JDBC&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.TestInsertionWithProduct">
-    <configuration name="TestConection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.TestConection" />
+}</component>
+  <component name="RunManager" selected="Application.TestCategoryListing">
+    <configuration name="TestCategoryListing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.TestCategoryListing" />
       <module name="loja_virtual" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -96,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestInsertionWithProduct" />
+        <item itemvalue="Application.TestCategoryListing" />
         <item itemvalue="Application.TestListing" />
+        <item itemvalue="Application.TestInsertionWithProduct" />
         <item itemvalue="Application.TestPoolConnections" />
         <item itemvalue="Application.TestInsertWithParameters" />
-        <item itemvalue="Application.TestConection" />
       </list>
     </recent_temporary>
   </component>
@@ -113,6 +120,14 @@
       <option name="presentableId" value="Default" />
       <updated>1671341344255</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1671418405412</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671418405412</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -128,5 +143,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>

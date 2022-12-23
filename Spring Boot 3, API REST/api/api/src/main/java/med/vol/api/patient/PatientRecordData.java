@@ -1,6 +1,15 @@
 package med.vol.api.patient;
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import med.vol.api.address.AddressData;
 
-public record PatientRecordData(String nome, String email, String telefone, AddressData endereco) {
+public record PatientRecordData(
+        @NotBlank String nome,
+        @NotBlank @Email String email,
+        @NotBlank String telefone,
+        @NotBlank @Pattern(regexp = "\\d{3}\\.?\\d{3}\\.?\\d{3}\\-?\\d{2}") String cpf,
+        @NotBlank @Valid AddressData endereco) {
 }

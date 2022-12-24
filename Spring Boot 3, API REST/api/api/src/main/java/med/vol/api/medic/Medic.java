@@ -25,6 +25,7 @@ public class Medic {
     private Specialty especialidade;
     @Embedded
     private Address endereco;
+    private Boolean active;
 
     public Medic(MedicalRecordData data) {
         this.nome = data.nome();
@@ -33,5 +34,22 @@ public class Medic {
         this.crm = data.crm();
         this.especialidade = data.especialidade();
         this.endereco = new Address(data.endereco());
+        this.active = true;
+    }
+
+    public void updateData(MedicalUpdateData data) {
+        if (data.nome() != null) {
+            this.nome = data.nome();
+        }
+        if (data.telefone() != null) {
+            this.telefone = data.telefone();
+        }
+        if (data.endereco() != null) {
+            this.endereco.updateAddres(data.endereco());
+        }
+    }
+
+    public void inactive() {
+        this.active = false;
     }
 }

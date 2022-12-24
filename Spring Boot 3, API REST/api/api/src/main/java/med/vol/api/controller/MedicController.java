@@ -2,10 +2,7 @@ package med.vol.api.controller;
 
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
-import med.vol.api.medic.Medic;
-import med.vol.api.medic.MedicRepository;
-import med.vol.api.medic.MedicalListingData;
-import med.vol.api.medic.MedicalRecordData;
+import med.vol.api.medic.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -29,6 +26,28 @@ public class MedicController {
 
     @GetMapping
     public Page<MedicalListingData> list(@PageableDefault(size=10, sort={"nome"}) Pageable pagination) {
-        return repository.findAll(pagination).map(MedicalListingData::new);
+        return repository.findAllByActiveTrue(pagination).map(MedicalListingData::new); // criando automaticamente um metodo de acesso ao banco com findAllBy+Nome_do_atributo+Condicional
     }
+
+    @PutMapping
+    @Transactional
+    public void update(@RequestBody @Valid MedicalUpdateData data) {
+        var medic = repository.getReferenceById(data.id());
+        medic.updateData(data);
+    }
+
+    @DeleteMapping("/{id}") // recebendo o id na URL
+    @Transactional
+    public void delete(@PathVariable Long id) {
+        var medic = repository.getReferenceById(id);
+        medic.inactive(); // inativando o paciente no banco
+    }
+
+//    deletando o usuario no banco
+//    @DeleteMapping("/{id}")
+//    @Transactional
+//    public void delete(@PathVariable Long id) {
+//        repository.deleteById(id);
+//    }
+
 }

@@ -23,6 +23,7 @@ public class Patient {
     private String cpf;
     @Embedded
     private Address endereco;
+    private boolean active;
 
     public Patient(PatientRecordData data) {
         this.nome = data.nome();
@@ -30,5 +31,22 @@ public class Patient {
         this.telefone = data.telefone();
         this.cpf = data.cpf();
         this.endereco = new Address(data.endereco());
+        this.active = true;
+    }
+
+    public void updateData(PatientUpdateData data) {
+        if (data.nome() != null) {
+            this.nome = data.nome();
+        }
+        if (data.telefone() != null) {
+            this.telefone = data.telefone();
+        }
+        if (data.endereco() != null) {
+            this.endereco.updateAddres(data.endereco());
+        }
+    }
+
+    public void inactive() {
+        this.active = false;
     }
 }

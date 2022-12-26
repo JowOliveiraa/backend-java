@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4290bb1e-b8d7-49ad-8e87-f7e189555a91" name="Changes" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +50,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TestCategoryListing">
+  <component name="RunManager" selected="Application.TestInsertionWithProduct">
     <configuration name="TestCategoryListing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.TestCategoryListing" />
       <module name="loja_virtual" />
@@ -101,9 +100,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestInsertionWithProduct" />
         <item itemvalue="Application.TestCategoryListing" />
         <item itemvalue="Application.TestListing" />
-        <item itemvalue="Application.TestInsertionWithProduct" />
         <item itemvalue="Application.TestPoolConnections" />
         <item itemvalue="Application.TestInsertWithParameters" />
       </list>

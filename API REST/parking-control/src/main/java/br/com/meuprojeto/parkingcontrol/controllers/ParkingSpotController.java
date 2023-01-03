@@ -11,7 +11,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 @RestController
 @RequestMapping("/parking-spot")
@@ -22,7 +21,7 @@ public class ParkingSpotController {
     ParkingSpotService service;
 
     @PostMapping
-    public ResponseEntity<String> register(@RequestBody @Valid ParkingSpotDTO dto) {
+    public ResponseEntity<Object> register(@RequestBody @Valid ParkingSpotDTO dto) {
         return service.validation(dto);
     }
 

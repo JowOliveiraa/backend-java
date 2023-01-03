@@ -13,5 +13,6 @@ public interface ParkingSpotRepository extends JpaRepository<ParkingSpot, Long> 
 
     boolean existsByBlockAndApartment(String block, String apartment);
 
+    ParkingSpot findByParkingSpotNumber(String parkingSpotNumber);
 }
 

@@ -1,19 +1,16 @@
 package br.com.meuprojeto.parkingcontrol.services;
 
 import br.com.meuprojeto.parkingcontrol.dtos.ParkingSpotDTO;
+import br.com.meuprojeto.parkingcontrol.dtos.parkingSpotDetailDTO;
 import br.com.meuprojeto.parkingcontrol.models.ParkingSpot;
 import br.com.meuprojeto.parkingcontrol.repositories.ParkingSpotRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-
-import java.util.List;
 
 @Service
 public class ParkingSpotService {
@@ -22,9 +19,10 @@ public class ParkingSpotService {
     ParkingSpotRepository repository;
 
     @Transactional
-    public ResponseEntity<String> validation(ParkingSpotDTO dto) {
+    public ResponseEntity<Object> validation(ParkingSpotDTO dto) {
         if (repository.existsByParkingSpotNumber(dto.parkingSpotNumber())){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("A vaga ja está em uso!");
+            var parkingSpot = repository.findByParkingSpotNumber(dto.parkingSpotNumber());
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(new parkingSpotDetailDTO(parkingSpot));
         }
         if (repository.existsByLicensePlateCar(dto.licensePlateCar())) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body("A placa do carro ja foi registrada!");
@@ -33,7 +31,7 @@ public class ParkingSpotService {
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Já existe uma vaga cadastrada para esse Bloco e apartamento!");
         }
         repository.save(new ParkingSpot(dto));
-        return ResponseEntity.status(HttpStatus.ACCEPTED).body("Cadastrado com sucesso!");
+        return ResponseEntity.status(HttpStatus.CREATED).body("Cadastrado com sucesso!");
     }
 
     public Page<ParkingSpot> list(Pageable pageable) {
@@ -42,7 +40,8 @@ public class ParkingSpotService {
 
     public ResponseEntity<Object> findById(Long id) {
         if (repository.existsById(id)){
-            return ResponseEntity.status(HttpStatus.OK).body(repository.findById(id));
+            var parkingSpot = repository.getReferenceById(id);
+            return ResponseEntity.ok(new parkingSpotDetailDTO(parkingSpot));
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("O id informado não existe!");
     }
@@ -60,7 +59,6 @@ public class ParkingSpotService {
     public ResponseEntity<String> update(Long id, ParkingSpotDTO dto) {
         if (repository.existsById(id)){
             var parkingSpot = repository.getReferenceById(id);
-
 
             parkingSpot.update(dto);
         return ResponseEntity.status(HttpStatus.ACCEPTED).body("Atualizado com sucesso!");

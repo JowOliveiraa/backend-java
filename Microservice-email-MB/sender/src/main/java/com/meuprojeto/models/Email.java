@@ -9,6 +9,7 @@ import org.hibernate.validator.constraints.Length;
 import java.io.Serial;
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 
 @Getter
@@ -21,7 +22,7 @@ public class Email implements Serializable{
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private UUID id;
     @Length(max = 50)
     private String ownerRef;
     @Length(max = 50)

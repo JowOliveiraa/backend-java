@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9aa4296-1ed1-43d1-8a0c-92c75d3576a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/parking-control/src/main/java/br/com/meuprojeto/parkingcontrol/controllers/ParkingSpotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/parking-control/src/main/java/br/com/meuprojeto/parkingcontrol/controllers/ParkingSpotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parking-control/src/main/java/br/com/meuprojeto/parkingcontrol/repositories/ParkingSpotRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/parking-control/src/main/java/br/com/meuprojeto/parkingcontrol/repositories/ParkingSpotRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parking-control/src/main/java/br/com/meuprojeto/parkingcontrol/services/ParkingSpotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/parking-control/src/main/java/br/com/meuprojeto/parkingcontrol/services/ParkingSpotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parking-control/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/parking-control/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parking-control/target/classes/br/com/meuprojeto/parkingcontrol/controllers/ParkingSpotController.class" beforeDir="false" afterPath="$PROJECT_DIR$/parking-control/target/classes/br/com/meuprojeto/parkingcontrol/controllers/ParkingSpotController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +47,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/backend-java/Spring Boot 3, API REST"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/backend-java/Spring Boot 3, API REST&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="br.com.meuprojeto.parkingcontrol.dtos" />

@@ -1,7 +1,5 @@
 package com.teste.primeiroexemplo.services;
 
-import com.teste.primeiroexemplo.dto.ProductDTO;
-import com.teste.primeiroexemplo.dto.ProductUpdateDTO;
 import com.teste.primeiroexemplo.models.Product;
 import com.teste.primeiroexemplo.repository.ProductRepository;
 import jakarta.transaction.Transactional;
@@ -17,7 +15,6 @@ import java.util.List;
 @Service
 public class ProductService {
 
-    @Autowired
     private ProductRepository repository;
 
     public Page<Product> serviceFindAll(Pageable page) {
@@ -38,7 +35,7 @@ public class ProductService {
     }
 
     @Transactional
-    public ResponseEntity<Object> serviceUpdate(Long id, ProductUpdateDTO dto) {
+    public ResponseEntity<Object> serviceUpdate(Long id, Product dto) {
         if (repository.existsById(id)) {
             var product = repository.getReferenceById(id);
             product.productUpdate(dto);

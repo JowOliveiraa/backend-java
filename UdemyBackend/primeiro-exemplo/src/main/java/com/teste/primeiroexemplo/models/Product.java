@@ -1,6 +1,5 @@
 package com.teste.primeiroexemplo.models;
 
-import com.teste.primeiroexemplo.dto.ProductUpdateDTO;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,18 +26,7 @@ public class Product implements Serializable {
     private double price;
     private String observation;
 
-    public void productUpdate(ProductUpdateDTO dto) {
-        if (Objects.nonNull(dto.name())) {
-            this.name = dto.name();
-        }
-        if (Objects.nonNull(dto.quantity())) {
-            this.quantity = dto.quantity();
-        }
-        if (Objects.nonNull(dto.price())) {
-            this.price = dto.price();
-        }
-        if (Objects.nonNull(dto.observation())) {
-            this.observation = dto.observation();
-        }
+    public Product productUpdate(Product dto) {
+        this
     }
 }

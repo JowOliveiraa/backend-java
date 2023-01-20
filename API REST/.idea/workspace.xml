@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9aa4296-1ed1-43d1-8a0c-92c75d3576a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="a9aa4296-1ed1-43d1-8a0c-92c75d3576a2" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parking-control/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/parking-control/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parking-control/target/classes/br/com/meuprojeto/parkingcontrol/controllers/ParkingSpotController.class" beforeDir="false" afterPath="$PROJECT_DIR$/parking-control/target/classes/br/com/meuprojeto/parkingcontrol/controllers/ParkingSpotController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UdemyBackend/primeiro-exemplo/src/main/java/com/teste/primeiroexemplo/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UdemyBackend/primeiro-exemplo/src/main/java/com/teste/primeiroexemplo/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UdemyBackend/primeiro-exemplo/src/main/java/com/teste/primeiroexemplo/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UdemyBackend/primeiro-exemplo/src/main/java/com/teste/primeiroexemplo/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UdemyBackend/primeiro-exemplo/src/main/java/com/teste/primeiroexemplo/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UdemyBackend/primeiro-exemplo/src/main/java/com/teste/primeiroexemplo/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UdemyBackend/primeiro-exemplo/src/main/java/com/teste/primeiroexemplo/services/ProductService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,14 @@
       <option name="presentableId" value="Default" />
       <updated>1672671813653</updated>
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1673524656912</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673524656912</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -80,5 +88,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

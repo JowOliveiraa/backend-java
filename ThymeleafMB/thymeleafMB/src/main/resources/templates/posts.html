@@ -40,7 +40,7 @@
                             <span th:text="${post.author}"></span>
                             <span th:text="${post.date}"></span>
                         </p>
-                        <a th:href="@{'/posts/'+${post.id}"><h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;"><span th:text="${post.title}"></span></h4></a> <!--O "@{'/posts/'" é o caminho da url para chegar no metodo, depois disso passa o id-->
+                        <a th:href="@{/posts/{id}(id=${post.id})}"><h4 class="card-title" style="font-weight: bold; color: black; padding-top: 5px;"><span th:text="${post.title}"></span></h4></a> <!--O "@{'/posts/'" é o caminho da url para chegar no metodo, depois disso passa o id-->
                         <p class="card-text"><span th:utext="${#strings.abbreviate(post.text, 400)}"></span></p> <!--O utext serve para defirnir uma quantidade de caracteres, nesse caso, os 400 depois da virgula-->
 
                     </div>

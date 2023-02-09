@@ -21,7 +21,7 @@ public class PostController {
         return service.findAll();
     }
 
-    @RequestMapping(value = "/posts", method = RequestMethod.GET)
+    @GetMapping(value = "/posts")
     public ModelAndView getPosts() {
         var mv = new ModelAndView("posts");
         List<Post> posts = service.findAll();
@@ -30,12 +30,17 @@ public class PostController {
 
     }
 
-    @RequestMapping(value = "/posts/{id}", method = RequestMethod.GET)
+    @GetMapping(value = "/posts/{id}")
     public ModelAndView getById(@PathVariable("id") Long id) {
         var mv  = new ModelAndView("postDetails");
         var post = service.findById(id);
         mv.addObject("post", post);
         return mv;
+    }
+
+    @GetMapping(value = "/posts/newpost")
+    public String getPostForm() {
+        return "postForm";
     }
 
 }

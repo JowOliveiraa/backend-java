@@ -30,4 +30,8 @@ public class PostService {
 
         return newPost;
     }
+
+    public void deleteById(Long id) {
+        repository.deleteById(id);
+    }
 }

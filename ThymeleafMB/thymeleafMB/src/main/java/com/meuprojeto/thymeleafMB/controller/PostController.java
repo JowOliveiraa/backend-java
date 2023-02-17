@@ -19,10 +19,7 @@ public class PostController {
     @Autowired
     PostService service;
 
-    @GetMapping
-    public List<Post> list () {
-        return service.findAll();
-    }
+
 
     @GetMapping(value = "/posts")
     public ModelAndView getPosts() {
@@ -49,6 +46,7 @@ public class PostController {
     @PostMapping(value = "/newpost")
     public String savePost(@Valid Post post, BindingResult result, RedirectAttributes attributes) {
         if (result.hasErrors()) {
+            attributes.addFlashAttribute("mensagem", "Verifique se todos os campos foram preenchidos!");
             return "redirect:/newpost";
         }
         var newPost = new Post(post);
@@ -56,11 +54,5 @@ public class PostController {
         return "redirect:/posts";
     }
 
-    @DeleteMapping(value = "posts/{id}")
-    public String delete(@PathVariable("id") Long id) {
-        service.deleteById(id);
-
-        return "redirect/posts";
-    }
 
 }
